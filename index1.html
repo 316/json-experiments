@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>Some testing page</title>
+    <script type="text/javascript" src="jquery.js"></script>
+  </head>
+  <body>
+    <input class="q" type="text" name="code" value="" /><br />
+
+    <table class="table" width="" cellspacing="" cellpadding="" border="5">
+      <thead>
+	<th>ID</th>
+	<th>Nombre</th>
+	<th>Familia</th>
+	<th>Fabricante</th>
+	<th>Subfamilia</th>
+      </thead>
+      <tbody>
+	
+      </tbody>
+    </table>
+  </body>
+
+<div class="articulos">
+  
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+      $(".q").keyup(function() {
+	  var q = $(this).val();
+	  $.ajax({ // ajax call starts
+	      url: 'articulos.json', // JQuery loads serverside.php
+	      data: 'q=' + $(this).val(), // Send value of the clicked button
+	      dataType: 'json', // Choosing a JSON datatype
+	      success: function(data) // Variable data contains the data we get from serverside
+	      {
+		  // $('#wines').html(''); // Clear #wines div
+		  
+		  for (var i in data) {
+
+		      if (data[i].id == q)
+			  $('.articulos').append('articulo:  ' + data[i].nombre + '<br/>');
+		  }
+	      }
+	  });
+	  $(".q").val("");
+	  return false; // keeps the page from not refreshing 
+	  
+      });
+  });
+		     
+</script>
+</html>

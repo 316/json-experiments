@@ -1,0 +1,43 @@
+[
+	  {
+		"subfamilia": "frutales", 
+		"fabricante": "baggio", 
+		"familia": "jugos", 
+		"nombre": "baggio", 
+		"id": 1
+		}, 
+	   {
+		"subfamilia": "cola", 
+		"fabricante": "cocacola", 
+		"familia": "gaseosa", 
+		"nombre": "coca", 
+		"id": 2
+		},    
+	   {
+		"subfamilia": "frutales",
+		"fabricante": "pepsi", 
+		"familia": "gaseosa", 
+		"nombre": "mirinda", 
+		"id": 3
+		}, 
+	   {	
+	   	"subfamilia": "cola", 
+		"fabricante": "pepsi", 
+		"familia": "gaseosa", 
+		"nombre": "pepsi", 
+		"id": 4}, 
+	   {
+		"subfamilia": "limonada",	
+		"fabricante": "cocacola", 
+		"familia": "gaseosa", 
+		"nombre": "Sprite", 
+		"id": 5
+		}, 
+	   {
+		"subfamilia": "frutales",
+		"fabricante": "cepita", 
+		"familia": "jugos", 
+		"nombre": "cepita", 
+		"id": 6
+		}
+  	   ]

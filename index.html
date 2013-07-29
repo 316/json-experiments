@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>Some testing page</title>
+    <script type="text/javascript" src="jquery.js"></script>
+  </head>
+  <body>
+    <h2>Tabla de ejemplo, datos desde articulos.json</h2>
+    <table class="table" width="" cellspacing="" cellpadding="" border="5">
+      <thead>
+	<th>ID</th>
+	<th>Nombre</th>
+	<th>Familia</th>
+	<th>Fabricante</th>
+	<th>Subfamilia</th>
+      </thead>
+      <tbody>
+	
+      </tbody>
+    </table>
+  </body>
+
+<script type="text/javascript">
+   $.getJSON("articulos.json",
+       function(data) {
+        $.each(data, function(key, val) {
+            var tr=$('<tr></tr>');
+            $.each(val, function(k, v){
+                $('<td>'+v+'</td>').appendTo(tr);
+            });
+            tr.appendTo('.table');
+
+   });
+});
+   
+</script>
+</html>
