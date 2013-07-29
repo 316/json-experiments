@@ -34,3 +34,4 @@ Some complex operations like:
 * dynamic search
 * ammount validation
 * make it work on web2py ;D
+* sepparate js and html files
